@@ -8,3 +8,5 @@
 현재 던전 제작중
 
 앞으로 할 일 : 던전 제작 + 메인 캐릭터 에셋 받기
+
+![screenshot_1]https://github.com/pois689/soulstone/blob/master/%EC%BA%A1%EC%B2%981.PNG
