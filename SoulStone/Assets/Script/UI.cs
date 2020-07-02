@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -48,12 +48,24 @@ public class UI : MonoBehaviour
     // 게임 시작 버튼 클릭시 발생하는 함수
     public void OnGameStart() 
     {
-        Show("playUI", true);
+        Show("loadingUI", true);
     }
 
     // 게임 종료 버튼 클릭시 발생하는 함수
     public void OnExit()
     {
         Debug.Log("게임종료");
+    }
+
+    // 나가기 버튼 클릭시 발생하는 함수
+    public void OnMenu() 
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    // 플레이 중 옵션 버튼 클릭시 발생하는 함수
+    public void PlaySetting() 
+    {
+        Show("playsettingUI", true);
     }
 }
