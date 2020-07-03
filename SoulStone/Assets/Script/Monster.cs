@@ -36,15 +36,11 @@ public class Monster : MonoBehaviour
 
         if (_hp == 0)
         {
-            /*_ani.SetBool("die", true);*/
+            _ani.SetBool("die", true);
 
             if (_boxCol != null)
             {
                 _boxCol.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("[Error] BoxCollider2D가 Null입니다!");
             }
         }
     }
