@@ -8,17 +8,18 @@ public class MyCharacter2D : MonoBehaviour
 {
     public Rigidbody2D _rigid;
     public float _maxForce = 0.0f;
-    public Animator _ani;
+    protected Animator _ani;
+    public UI _ui;
 
     public int _hp = 0;
     public int _maxHp = 300;
-    // Start is called before the first frame update
+
     void Start()
     {
         _hp = _maxHp;
+        _ani = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // run애니메이션
@@ -43,6 +44,22 @@ public class MyCharacter2D : MonoBehaviour
                 float newScaleX = Mathf.Abs(scale.x);
                 transform.localScale = new Vector3(-1 * newScaleX, scale.y, scale.z);
             }
+        }
+
+    // 피격당했을때
+    public void OnDamage(int damage)
+    {
+        _hp -= damage;
+        _hp = Math.Max(0, _hp); // Hp가 0이하로 내려가는 것을 방지
+        _ani.SetBool("hit", true);
+        _ani.SetInteger("hp", _hp);
+
+        if (_hp == 0)
+        {
+            // 게임오버 처리
+            _ui.Show("gameoverUI", true);
 
         }
+    }
+
 }

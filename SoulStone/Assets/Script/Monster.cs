@@ -15,17 +15,17 @@ public class Monster : MonoBehaviour
 
     public int _hp = 0;
     public int _maxHp = 100;
-    protected MyCharacter2D _char;
     protected Animator _ani;
     protected BoxCollider2D _boxCol;
-
+    protected MyCharacter2D _char;
+    
     // Start is called before the first frame update
     void Start()
     {
         _hp = _maxHp;
         _ani = GetComponent<Animator>(); // 게임오브젝트 안에 붙어있는 컴포넌트(애니메이터)를 할당해준다.
         _boxCol = GetComponent<BoxCollider2D>();
-        _char = GetComponent<MyCharacter2D>();
+        _char = FindObjectOfType<MyCharacter2D>();
     }
 
     public virtual void OnDamage(int damage)
@@ -49,16 +49,16 @@ public class Monster : MonoBehaviour
         }
     }
 
-    /*public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "player")
+        if (collision.gameObject.name == "Player")
         {
             _char.OnDamage(_attack);
-            GameObject effectfab = Instantiate(_effectPrefab); // instantiate = 복사
+            /*GameObject effectfab = Instantiate(_effectPrefab); // instantiate = 복사
             Vector3 charPos = _char.transform.position;
-            effectfab.transform.position = new Vector3(charPos.x, charPos.y, charPos.z);
+            effectfab.transform.position = new Vector3(charPos.x, charPos.y, charPos.z);*/
         }
-    }*/
+    }
 
     //방향전환 함수
     public void Flip(bool right)

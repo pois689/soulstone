@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
         Show("loadingUI", true);
     }
 
-    // 게임 종료 버튼 클릭시 발생하는 함수
+    // 게임 종료 버튼 클릭시 발생하는 함수 (메인메뉴에서만 가능)
     public void OnExit()
     {
         Debug.Log("게임종료");
