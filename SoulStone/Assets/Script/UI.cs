@@ -74,5 +74,7 @@ public class UI : MonoBehaviour
     public void Retry() 
     {
         _gamemgr.Respawn();
+        Show("playUI", true);
+
     }
 }

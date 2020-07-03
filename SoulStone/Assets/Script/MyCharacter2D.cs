@@ -11,13 +11,15 @@ public class MyCharacter2D : MonoBehaviour
     protected Animator _ani;
     public UI _ui;
 
-    public int _hp = 0;
+    public int _hp;
     public int _maxHp = 300;
+    public Player_Weapon _weapon;
 
     void Start()
     {
         _hp = _maxHp;
         _ani = GetComponent<Animator>();
+        _weapon.gameObject.SetActive(false); // 시작할때 weapon off
     }
 
     void Update()
@@ -58,8 +60,22 @@ public class MyCharacter2D : MonoBehaviour
         {
             // 게임오버 처리
             _ui.Show("gameoverUI", true);
-
+            
+            // 조작 금지로 바꾸기
+            My2DUserControl control = GetComponent<My2DUserControl>();
+            control.enabled = false;
         }
     }
 
+    // 캐릭터 부활하기
+    public void Revive() 
+    {
+        _ani.SetInteger("hp", _maxHp);
+    }
+
+    // 공격하기
+    public void Attack() 
+    {
+        _ani.SetBool("attack", true);
+    }
 }
