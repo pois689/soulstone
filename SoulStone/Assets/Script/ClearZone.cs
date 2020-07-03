@@ -6,10 +6,10 @@ public class ClearZone : MonoBehaviour
 {
     public GameManager _gameMgr;
     public int _stageNum = 0;
-    // 스테이지존에 도착하면 발생하는 함수
-    public void OnTriggerEnter(Collider other)
+    // 클리어존에 도착하면 발생하는 함수
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.name=="player")
+        if (collision.gameObject.name == "Player")
         {
             _gameMgr.GoNext(_stageNum);
         }

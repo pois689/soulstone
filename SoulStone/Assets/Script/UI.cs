@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public GameObject[] _uiList;
+    public GameManager _gamemgr;
 
     // Start is called before the first frame update
     void Start()
@@ -67,5 +68,11 @@ public class UI : MonoBehaviour
     public void PlaySetting() 
     {
         Show("playsettingUI", true);
+    }
+
+    // 게임오버 UI에서 다시하기 클릭시 발생하는 함수
+    public void Retry() 
+    {
+        _gamemgr.Respawn();
     }
 }
