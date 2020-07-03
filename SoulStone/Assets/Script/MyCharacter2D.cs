@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MyCharacter2D : MonoBehaviour
 {
-    public Rigidbody _rigid;
+    public Rigidbody2D _rigid;
     public float _jumpForce = 350.0f;
     public float _maxForce = 3.0f;
 
