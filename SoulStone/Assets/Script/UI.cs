@@ -7,12 +7,12 @@ public class UI : MonoBehaviour
 {
     public GameObject[] _uiList;
     public GameManager _gamemgr;
+    public MyCharacter2D _myChar2D;
 
     // Start is called before the first frame update
     void Start()
     {
         HideAll();
-
         Show("startUI", true);
     }
 
@@ -75,6 +75,20 @@ public class UI : MonoBehaviour
     {
         _gamemgr.Respawn();
         Show("playUI", true);
-
     }
+
+    // 체력바 on / off
+/*    public void Hpbar(string name) 
+    {
+        for (int i = 0; i < _uiList.Length; i++)
+        {
+            GameObject ui = null;
+            ui = _uiList[i];
+
+            if (ui.name == name)
+            {
+                ui.SetActive(false);
+            }
+        }
+    }*/
 }

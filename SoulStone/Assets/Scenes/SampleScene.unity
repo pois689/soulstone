@@ -4268,8 +4268,8 @@ MonoBehaviour:
   _rigid: {fileID: 301654242}
   _maxForce: 3
   _ui: {fileID: 510260264}
-  _hp: 100
-  _maxHp: 100
+  _hp: 0
+  _maxHp: 300
   _weapon: {fileID: 1715168914}
 --- !u!95 &301654245
 Animator:
@@ -7134,6 +7134,7 @@ MonoBehaviour:
   - {fileID: 1063941638}
   - {fileID: 1414418507}
   _gamemgr: {fileID: 1448543723}
+  _myChar2D: {fileID: 301654244}
 --- !u!1 &515230005
 GameObject:
   m_ObjectHideFlags: 0
@@ -14703,7 +14704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bcbcae3a645b441a2e13b3fac330d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attack: 10
+  _attack: 100
   _speed: 1
   _desPoint: 5.5
   _orgPoint: -0.21
@@ -18137,7 +18138,7 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 10
+  m_FontSize: 142
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 1f16052dfd5f6f54e94e97ecedd4c86b, type: 3}
@@ -18191,8 +18192,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206195436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.119, y: 0.06, z: -0.1}
-  m_LocalScale: {x: 0.09435438, y: 0.16317208, z: 0.77202004}
+  m_LocalPosition: {x: -0.12042, y: 0.064511, z: -0.1}
+  m_LocalScale: {x: 0.006752602, y: 0.011677635, z: 0.055250686}
   m_Children: []
   m_Father: {fileID: 1914280012}
   m_RootOrder: 0
@@ -28670,7 +28671,7 @@ GameObject:
   - component: {fileID: 1900072158}
   - component: {fileID: 1900072157}
   m_Layer: 5
-  m_Name: hp
+  m_Name: hp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

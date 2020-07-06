@@ -56,13 +56,28 @@ public class MyCharacter2D : MonoBehaviour
         _ani.SetBool("hit", true);
         _ani.SetInteger("hp", _hp);
 
+/*        if (_hp<=200)
+        {
+            _ui.Hpbar("hp3");
+        }
+        else if (_hp<=100)
+        {
+            _ui.Hpbar("hp2");
+        }
+        else if (_hp<=0)
+        {
+            _ui.Hpbar("hp1");
+        }*/
+
         if (_hp == 0)
         {
             // 게임오버 처리
             _ui.Show("gameoverUI",true);
             
-            // 조작 금지로 바꾸기
+            // 조작 금지로 바꾸기 및 죽은 후 카메라가 이동하는 버그 수정
             My2DUserControl control = GetComponent<My2DUserControl>();
+            control._moveForceX = 0;
+            control._moveForceY = 0;
             control.enabled = false;
         }
     }
