@@ -7138,7 +7138,6 @@ MonoBehaviour:
   - {fileID: 714033184}
   - {fileID: 113617573}
   _gamemgr: {fileID: 1448543723}
-  _myChar2D: {fileID: 301654244}
 --- !u!1 &515230005
 GameObject:
   m_ObjectHideFlags: 0
@@ -14725,7 +14724,7 @@ Animator:
   m_GameObject: {fileID: 964135666}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b6903e649cf0b284fa0778e5f8edd7d7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 252290bee56072049a87be914296eb31, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

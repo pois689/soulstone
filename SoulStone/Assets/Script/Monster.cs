@@ -45,7 +45,7 @@ public class Monster : MonoBehaviour
     }
 
     // 몬스터가 죽으면 4초뒤에 사라지게 하기
-    public void MonsterDie() 
+    public void MonsterDie()
     {
         this.gameObject.SetActive(false);
     }
