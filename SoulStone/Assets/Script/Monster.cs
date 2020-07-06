@@ -33,7 +33,6 @@ public class Monster : MonoBehaviour
         _hp -= damage;
         _hp = Math.Max(0, _hp); // Hp가 0이하로 내려가는 것을 방지
 
-
         if (_hp == 0)
         {
             _ani.SetBool("die", true);
@@ -43,6 +42,12 @@ public class Monster : MonoBehaviour
                 _boxCol.enabled = false;
             }
         }
+    }
+
+    // 몬스터가 죽으면 4초뒤에 사라지게 하기
+    public void MonsterDie() 
+    {
+        this.gameObject.SetActive(false);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

@@ -59,7 +59,7 @@ public class MyCharacter2D : MonoBehaviour
         if (_hp == 0)
         {
             // 게임오버 처리
-            _ui.Show("gameoverUI", true);
+            _ui.Show("gameoverUI",true);
             
             // 조작 금지로 바꾸기
             My2DUserControl control = GetComponent<My2DUserControl>();
@@ -68,8 +68,9 @@ public class MyCharacter2D : MonoBehaviour
     }
 
     // 캐릭터 부활하기
-    public void Revive() 
+    public void Respawn() 
     {
+        _hp = _maxHp; // 부활 후 피 회복
         _ani.SetInteger("hp", _maxHp);
     }
 
