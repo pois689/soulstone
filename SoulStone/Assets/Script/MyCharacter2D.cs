@@ -56,18 +56,14 @@ public class MyCharacter2D : MonoBehaviour
         _ani.SetBool("hit", true);
         _ani.SetInteger("hp", _hp);
 
-/*        if (_hp<=200)
-        {
-            _ui.Hpbar("hp3");
-        }
+        if (_hp==0)
+            _ui.Hpbar(false, false, false);
         else if (_hp<=100)
-        {
-            _ui.Hpbar("hp2");
-        }
-        else if (_hp<=0)
-        {
-            _ui.Hpbar("hp1");
-        }*/
+            _ui.Hpbar(true, false, false);
+        else if (_hp<=200)
+            _ui.Hpbar(true, true, false);
+        else if (_hp<=300)
+            _ui.Hpbar(true, true, true);
 
         if (_hp == 0)
         {
@@ -87,6 +83,7 @@ public class MyCharacter2D : MonoBehaviour
     {
         _hp = _maxHp; // 부활 후 피 회복
         _ani.SetInteger("hp", _maxHp);
+        _ui.Hpbar(true, true, true);
     }
 
     // 공격하기

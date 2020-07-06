@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public GameObject[] _uiList;
+    public GameObject[] _hpList;
     public GameManager _gamemgr;
     public MyCharacter2D _myChar2D;
 
@@ -42,7 +43,6 @@ public class UI : MonoBehaviour
             {
                 ui.SetActive(show);
             }
-
         }
     }
 
@@ -70,6 +70,12 @@ public class UI : MonoBehaviour
         Show("playsettingUI", true);
     }
 
+    // 플레이 중 계속하기 버튼 클릭시 발생하는 함수
+    public void Continue() 
+    {
+        Show("playUI", true);
+    }
+
     // 게임오버 UI에서 다시하기 클릭시 발생하는 함수
     public void Retry() 
     {
@@ -78,17 +84,19 @@ public class UI : MonoBehaviour
     }
 
     // 체력바 on / off
-/*    public void Hpbar(string name) 
+    public void Hpbar(bool hp1, bool hp2, bool hp3)
     {
-        for (int i = 0; i < _uiList.Length; i++)
+        for (int i = 0; i < _hpList.Length; i++)
         {
             GameObject ui = null;
-            ui = _uiList[i];
+            ui = _hpList[i];
 
-            if (ui.name == name)
+            switch (i)
             {
-                ui.SetActive(false);
+                case 0: ui.SetActive(hp1); break;
+                case 1: ui.SetActive(hp2); break;
+                case 2: ui.SetActive(hp3); break;
             }
         }
-    }*/
+    }
 }

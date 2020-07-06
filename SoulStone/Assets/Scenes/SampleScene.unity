@@ -7133,6 +7133,10 @@ MonoBehaviour:
   - {fileID: 1927905790}
   - {fileID: 1063941638}
   - {fileID: 1414418507}
+  _hpList:
+  - {fileID: 1900072155}
+  - {fileID: 714033184}
+  - {fileID: 113617573}
   _gamemgr: {fileID: 1448543723}
   _myChar2D: {fileID: 301654244}
 --- !u!1 &515230005
@@ -20929,7 +20933,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 510260264}
-        m_MethodName: OnGameStart
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
