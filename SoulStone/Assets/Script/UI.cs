@@ -8,7 +8,6 @@ public class UI : MonoBehaviour
     public GameObject[] _uiList;
     public GameObject[] _hpList;
     public GameManager _gamemgr;
-    public MyCharacter2D _myChar2D;
 
     // Start is called before the first frame update
     void Start()

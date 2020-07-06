@@ -72,8 +72,8 @@ public class MyCharacter2D : MonoBehaviour
             
             // 조작 금지로 바꾸기 및 죽은 후 카메라가 이동하는 버그 수정
             My2DUserControl control = GetComponent<My2DUserControl>();
-            control._moveForceX = 0;
-            control._moveForceY = 0;
+            control._moveForceX = 0.0f;
+            control._moveForceY = 0.0f;
             control.enabled = false;
         }
     }

@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
     private int _curStage;
     public MyCharacter2D _myChar2D;
+    Monster _monster;
 
     // Start is called before the first frame update
     void Start()
     {
         _curStage = 0;
+        _monster = FindObjectOfType<Monster>();
     }
 
     // Update is called once per frame
@@ -50,5 +52,6 @@ public class GameManager : MonoBehaviour
         control.enabled = true; // 조작 가능으로 바꾸기
         _myChar2D.Respawn();
 
+        _monster.MonsterRespawn();
     }
 }

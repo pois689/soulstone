@@ -50,6 +50,14 @@ public class Monster : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    // retry 클릭시 몬스터 부활
+    public void MonsterRespawn() 
+    {
+        this.gameObject.SetActive(true);
+        _hp = _maxHp;
+        _boxCol.enabled = true;
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
