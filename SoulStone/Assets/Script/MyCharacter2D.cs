@@ -72,18 +72,9 @@ public class MyCharacter2D : MonoBehaviour
             
             // 조작 금지로 바꾸기 및 죽은 후 카메라가 이동하는 버그 수정
             My2DUserControl control = GetComponent<My2DUserControl>();
-            control._moveForceX = 0.0f;
-            control._moveForceY = 0.0f;
+            _rigid.velocity = new Vector2(0,0);
             control.enabled = false;
         }
-    }
-
-    // 캐릭터 부활하기
-    public void Respawn() 
-    {
-        _hp = _maxHp; // 부활 후 피 회복
-        _ani.SetInteger("hp", _maxHp);
-        _ui.Hpbar(true, true, true);
     }
 
     // 공격하기

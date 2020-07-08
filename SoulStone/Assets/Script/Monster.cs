@@ -47,15 +47,7 @@ public class Monster : MonoBehaviour
     // 몬스터가 죽으면 4초뒤에 사라지게 하기
     public void MonsterDie()
     {
-        this.gameObject.SetActive(false);
-    }
-
-    // retry 클릭시 몬스터 부활
-    public void MonsterRespawn() 
-    {
-        this.gameObject.SetActive(true);
-        _hp = _maxHp;
-        _boxCol.enabled = true;
+            this.gameObject.SetActive(false);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

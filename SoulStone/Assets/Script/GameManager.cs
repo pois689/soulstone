@@ -37,21 +37,4 @@ public class GameManager : MonoBehaviour
 
         _curStage++;
     }
-
-    // 다시하기 클릭시 발생하는 함수
-    public void Respawn()
-    {
-        // 현재 스테이지의 시작포인트 가져오기
-        GameObject spawnPoint = _startPointList[_curStage];
-        Vector3 newPos = spawnPoint.transform.position;
-        Vector3 charPos = _player.transform.position; // 스타트 포인트 때문에 캐릭터의 z값이 변하는 것을 방지
-        _player.transform.position = new Vector3(newPos.x, newPos.y, charPos.z);
-
-        // 캐릭터 부활
-        My2DUserControl control =_player.GetComponent<My2DUserControl>();
-        control.enabled = true; // 조작 가능으로 바꾸기
-        _myChar2D.Respawn();
-
-        _monster.MonsterRespawn();
-    }
 }

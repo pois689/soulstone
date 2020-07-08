@@ -75,13 +75,6 @@ public class UI : MonoBehaviour
         Show("playUI", true);
     }
 
-    // 게임오버 UI에서 다시하기 클릭시 발생하는 함수
-    public void Retry() 
-    {
-        _gamemgr.Respawn();
-        Show("playUI", true);
-    }
-
     // 체력바 on / off
     public void Hpbar(bool hp1, bool hp2, bool hp3)
     {
