@@ -21,12 +21,6 @@ public class GameManager : MonoBehaviour
         _monster = FindObjectOfType<Monster>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GoNext(int stageNum) 
     {
         GameObject startPoint = _startPointList[stageNum]; // 스테이지 넘버를 넣어준다
