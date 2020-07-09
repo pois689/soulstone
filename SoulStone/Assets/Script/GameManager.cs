@@ -10,14 +10,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] _startPointList;
     public int[] _mapNum;
     public GameObject _player;
-    private int _curStage;
     public MyCharacter2D _myChar2D;
     Monster _monster;
 
     // Start is called before the first frame update
     void Start()
     {
-        _curStage = 0;
         _monster = FindObjectOfType<Monster>();
     }
 
@@ -28,7 +26,5 @@ public class GameManager : MonoBehaviour
         Vector3 pos = startPoint.transform.position;
 
         _player.transform.position = new Vector3(pos.x, pos.y, pos.z);
-
-        _curStage++;
     }
 }
