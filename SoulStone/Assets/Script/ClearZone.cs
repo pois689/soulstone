@@ -16,9 +16,11 @@ public class ClearZone : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            if (_startPos != null)
+            {
                 Vector3 pos = _startPos.transform.position;
-
                 collision.transform.position = new Vector3(pos.x, pos.y, pos.z);
+            }
         }
     }
 }
