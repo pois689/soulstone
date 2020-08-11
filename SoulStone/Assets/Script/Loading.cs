@@ -14,7 +14,7 @@ public class Loading : MonoBehaviour
     {
         if (value<1)
         {
-            value += Time.deltaTime - 0.005f; // 매 프레임마다 밸류값 올리기
+            value += Time.deltaTime; // 매 프레임마다 밸류값 올리기  - 0.005f
             slider.value = value;
         }
         else
